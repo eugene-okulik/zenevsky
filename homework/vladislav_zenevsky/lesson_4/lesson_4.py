@@ -14,7 +14,7 @@ my_dict = {
 print(my_dict['tuple'][-1])
 my_dict['list'].append(111)
 my_dict['list'].pop(1)
-my_dict['dict']['i am a tuple'] = 'you can trust me'
+my_dict['dict'][('i am a tuple',)] = 'you can trust me'
 my_dict['dict'].pop('test')
 my_dict['set'].add(100)
 my_dict['set'].remove('qa')
