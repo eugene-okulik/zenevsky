@@ -6,9 +6,11 @@ original_text = (
 new_text = []
 for word in original_text.split():
     if word.endswith(','):
-        new_text.append(f'{word.strip(',')}ing,')
+        word = word.strip(',')
+        new_text.append(f'{word}ing,')
     elif word.endswith('.'):
-        new_text.append(f'{word.strip('.')}ing.')
+        word = word.strip('.')
+        new_text.append(f'{word}ing.')
     else:
         new_text.append(f'{word}ing')
 print(' '.join(new_text))
