@@ -72,13 +72,13 @@ cursor.execute(f"SELECT * FROM books WHERE taken_by_student_id = {student_id}")
 print(cursor.fetchall())
 
 select_query = f'''
-SELECT * 
-FROM students s 
-JOIN books b ON b.taken_by_student_id = s.id 
-JOIN `groups` g ON g.id = s.group_id 
-JOIN marks m ON m.student_id = s.id 
-JOIN lessons l ON l.id = m.lesson_id 
-JOIN subjets s2 ON s2.id = l.subject_id 
+SELECT *
+FROM students s
+JOIN books b ON b.taken_by_student_id = s.id
+JOIN `groups` g ON g.id = s.group_id
+JOIN marks m ON m.student_id = s.id
+JOIN lessons l ON l.id = m.lesson_id
+JOIN subjets s2 ON s2.id = l.subject_id
 WHERE s.id = {student_id};
 '''
 
