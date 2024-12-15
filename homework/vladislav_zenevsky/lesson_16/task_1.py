@@ -15,7 +15,7 @@ db = mysql.connect(
 
 cursor = db.cursor(dictionary=True)
 
-select_query = f'''
+select_query = '''
 SELECT
 s.name,
 s.second_name,
