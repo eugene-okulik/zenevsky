@@ -30,10 +30,9 @@ JOIN `groups` g ON g.id = s.group_id
 JOIN marks m ON m.student_id = s.id
 JOIN lessons l ON l.id = m.lesson_id
 JOIN subjets s2 ON s2.id = l.subject_id
-WHERE s.name IN (%s, %s, %s) AND s.second_name IN (%s, %s, %s)
 '''
 
-cursor.execute(select_query, ('Ivan', 'Petr', 'Mark', 'Petrov', 'Ivanov', 'Pavlov'))
+cursor.execute(select_query)
 db_data = cursor.fetchall()
 
 db.close()
