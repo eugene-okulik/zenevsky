@@ -14,7 +14,7 @@ class ObjectUser(HttpUser):
 
     @task(2)
     def get_all_objects(self):
-        response = self.client.get(
+        self.client.get(
             url='/object'
         )
 
