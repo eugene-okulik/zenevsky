@@ -1,4 +1,5 @@
-import json, re
+import json
+import re
 
 from playwright.sync_api import Page, expect, Route
 
