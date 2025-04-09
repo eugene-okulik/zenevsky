@@ -46,6 +46,7 @@ def men_sale_page(page):
 def login_page(page):
     return LoginPage(page)
 
+
 @pytest.fixture()
 def account_page(page):
     return AccountPage(page)
